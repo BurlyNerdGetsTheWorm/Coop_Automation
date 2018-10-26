@@ -1,7 +1,8 @@
 <html>
 <head>
 <link href="site.css" rel="stylesheet">
-<div align="center"> <h1>Raspberry Pi Web Controls for 8 Outlet Relay</h1> 
+<div align="center"> 
+<h1>Raspberry Pi Web Controls for 8 Outlet Relay</h1> 
 </div>
 </head>
 <?php
@@ -74,6 +75,16 @@ exec("sudo python Pin09OFF.py");
 <body>
 
 <div align="center">
+
+<h3>Sunrise/Sunset Times</h3>
+<p>
+<?php
+$url = "https://apps.tsa.dhs.gov/MyTSAWebService/GetEventInfo.ashx?eventtype=sunrise_sunset&airportcode=FNT&output=json";
+$data = json_decode(file_get_contents($url),true);
+echo "Sunrise - ",$data[Sunrise],"<br />";
+echo "Sunset - ",$data[Sunset];
+?>
+</p><br /><br />
 
 <form method="post">
 
