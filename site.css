@@ -1,0 +1,27 @@
+#Outlet1Group,#Outlet2Group,#Outlet3Group,#Outlet4Group
+{
+float:left;
+}
+
+#Outlet5Group,#Outlet6Group,#Outlet7Group,#Outlet8Group
+{
+float:right;
+}
+.firstrow,.secondrow,.thirdrow,.fourthrow 
+{
+width:25%
+}
+
+.toprow,.bottomrow
+{
+background-image: url("fadedoutlet.jpg");
+background-repeat: no-repeat;
+background-size: 50%;
+background-position: center;
+margin-bottom:15px;
+}
+
+#example
+{
+clear:left;
+}
