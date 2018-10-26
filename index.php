@@ -1,5 +1,4 @@
 <html>
-<br>
 <head>
 <link href="site.css" rel="stylesheet">
 <div align="center"> <h1>Raspberry Pi Web Controls for 8 Outlet Relay</h1> 
