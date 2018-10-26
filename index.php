@@ -78,7 +78,8 @@ exec("sudo python Pin09OFF.py");
 <form method="post">
 
 <div id="Outlet2Group" class="toprow firstrow">
-<h3>Outlet 2:</h3> 
+<h3>Outlet 2:</h3>
+<p><strong>Plants</strong><p> 
 <button id="2-Outlet-On" class="btn" name="GPIO03ON">Light On</button>
 <button id="2-Outlet-Off" class="btn" name="GPIO03OFF">Light Off</button><br>
 <p>Connect led to Pin No :5/ GPIO 03</p>
