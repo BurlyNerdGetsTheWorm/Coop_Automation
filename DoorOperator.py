@@ -7,6 +7,7 @@ with open('values.json', 'r') as values:
     json_data = json.load(values)
     OpenState = json_data['open']
     Enabled = json_data['enabled']
+    
 
 print"Door is currently",OpenState
 print "Enabled is",Enabled
@@ -17,6 +18,9 @@ SunRiseSetData = response.json()
 
 SunriseTime = SunRiseSetData["Sunrise"]
 SunsetTime = SunRiseSetData["Sunset"]
+
+json_data['sunrisetime'] = SunriseTime
+json_data['sunsettime'] = SunsetTime
 
 #print sunrise sunset
 print "Sunrise is",SunriseTime
@@ -47,3 +51,7 @@ if ((int_Currenthour == (int(SunsetTime[:2])+1)) and (AMPM == "PM") and (Enabled
 	exec(open("DoorClose.py").read())
 else:
 	print("It is not currently time to close")
+
+#Write Sunrise and Sunset times to JSON
+	with open('values.json', 'w') as values:
+		values.write(json.dumps(json_data))

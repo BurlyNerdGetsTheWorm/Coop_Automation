@@ -93,6 +93,7 @@ echo "Sunset - ",$data[Sunset];
 <button id="2-Outlet-On" class="btn" name="GPIO03ON">Light On</button>
 <button id="2-Outlet-Off" class="btn" name="GPIO03OFF">Light Off</button><br>
 <p>Connect led to Pin No :5/ GPIO 03</p>
+
 </div>
 
 <div id="Outlet4Group" class="toprow secondrow">
@@ -121,6 +122,10 @@ echo "Sunset - ",$data[Sunset];
 <button id="1-Outlet-On" class="btn" name="GPIO02ON">Light On</button>
 <button id="1-Outlet-Off" class="btn" name="GPIO02OFF">Light Off</button><br>
 <p>Connect led to Pin No: 3/ GPIO 02</p>
+<p>Status: <?php
+$data = json_decode(file_get_contents("values.json"),true);
+echo $data[plug1];
+?>
 </div>
 
 <div id="Outlet3Group" class="bottomrow secondrow">

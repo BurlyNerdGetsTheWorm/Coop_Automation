@@ -1,0 +1,4 @@
+1) Add stepper motor hardware
+2) Install python controls for stepper motor
+3) Make PHP page retrieve JSON variables and print them
+4) Use PHP to retrieve JSON variabes and swap out HTML or CSS to reflect (green for on, etc.)

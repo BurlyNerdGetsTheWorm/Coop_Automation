@@ -17,6 +17,6 @@ if  (OpenState == 'Closed') and (Enabled is True):
 	json_data['open'] = "Open"
 
 	with open('values.json', 'w') as values:
-    		#values.write(json.dumps(json_data))
+    		values.write(json.dumps(json_data))
 else:
 	print("The door is already open")
