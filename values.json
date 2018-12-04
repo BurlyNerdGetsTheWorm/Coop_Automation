@@ -1,1 +1,15 @@
-{"feed": 100, "plug4": "Off", "open": "Open", "enabled": true, "sunsettime": "05:21:04 PM", "water": 100, "plug8": "Off", "plug1": "On", "plug3": "Off", "plug2": "Off", "plug5": "Off", "sunrisetime": "07:16:04 AM", "plug7": "Off", "plug6": "Off"}
+{
+"feed": 100,
+"plug4": "Off",
+"open": "Open",
+"enabled": true,
+"sunsettime": "05:21:04 PM",
+"water": 100,
+"plug8": "Off",
+"plug1": "On",
+"plug3": "Off",
+"plug2": "Off",
+"plug5": "Off",
+"sunrisetime": "07:16:04 AM",
+"plug7": "Off",
+"plug6": "Off"}

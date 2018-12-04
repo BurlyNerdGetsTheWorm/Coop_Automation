@@ -1,4 +1,12 @@
 #!/usr/bin/python
+import json
+
+#import/set values
+
+with open('values.json', 'r') as values:
+	json_data = json.load(values)
+	#Plug1 = json_data['plug1']
+
 import RPi.GPIO as GPIO
 import time
 
@@ -8,6 +16,13 @@ GPIO.setup(27,GPIO.OUT)
 
 def trigger():
     GPIO.output(27,True)
+
+#Update JSON file that the Plug 5 is now off
+
+json_data['plug5'] = "Off"
+
+with open('values.json', 'w') as values:
+		values.write(json.dumps(json_data))
 try:
     trigger()
 
