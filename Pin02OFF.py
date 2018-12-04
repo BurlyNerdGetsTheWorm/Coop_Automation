@@ -1,5 +1,4 @@
 #!/usr/bin/python
-
 import json
 
 #import/set values
@@ -17,7 +16,7 @@ GPIO.setup(2,GPIO.OUT)
 
 def trigger():
     GPIO.output(2,True)
-    
+
 #Update JSON file that the Plug 1 is now off
 
 json_data['plug1'] = "Off"
