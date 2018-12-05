@@ -152,7 +152,7 @@ $data = json_decode(file_get_contents("values.json"),true);
 if ($data[plug2] == "On") {
   echo "<strong>On</strong>";
 } else {
-  echo "<strong>Off</strong>";
+  echo $data[plug2];
 }
 ?>
 </div>
@@ -167,7 +167,7 @@ $data = json_decode(file_get_contents("values.json"),true);
 if ($data[plug4] == "On") {
   echo "<strong>On</strong>";
 } else {
-  echo "<strong>Off</strong>";
+  echo $data[plug4];
 }
 ?>
 </div>
@@ -182,7 +182,7 @@ $data = json_decode(file_get_contents("values.json"),true);
 if ($data[plug8] == "On") {
   echo "<strong>On</strong>";
 } else {
-  echo "<strong>Off</strong>";
+  echo $data[plug8];
 }
 ?>
 </div>
@@ -197,7 +197,7 @@ $data = json_decode(file_get_contents("values.json"),true);
 if ($data[plug6] == "On") {
   echo "<strong>On</strong>";
 } else {
-  echo "<strong>Off</strong>";
+  echo $data[plug6];
 }
 ?>
 </div>
@@ -212,7 +212,7 @@ $data = json_decode(file_get_contents("values.json"),true);
 if ($data[plug1] == "On") {
   echo "<strong>On</strong>";
 } else {
-  echo "<strong>Off</strong>";
+  echo $data[plug1];
 }
 ?>
 </div>
@@ -227,7 +227,7 @@ $data = json_decode(file_get_contents("values.json"),true);
 if ($data[plug3] == "On") {
   echo "<strong>On</strong>";
 } else {
-  echo "<strong>Off</strong>";
+  echo $data[plug3];
 }
 ?>
 </div>
@@ -242,7 +242,7 @@ $data = json_decode(file_get_contents("values.json"),true);
 if ($data[plug7] == "On") {
   echo "<strong>On</strong>";
 } else {
-  echo "<strong>Off</strong>";
+  echo $data[plug7];
 }
 ?>
 </div>
@@ -257,7 +257,7 @@ $data = json_decode(file_get_contents("values.json"),true);
 if ($data[plug5] == "On") {
   echo "<strong>On</strong>";
 } else {
-  echo "<strong>Off</strong>";
+  echo $data[plug5];
 }
 ?>
 </div>
