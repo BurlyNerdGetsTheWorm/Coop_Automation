@@ -6,15 +6,15 @@ import json
 
 with open('values.json', 'r') as values:
     json_data = json.load(values)
-    OpenState = json_data['open']
-    Enabled = json_data['enabled']
+    DoorStatus = json_data['doorstatus']
+    AutomationEnabled = json_data['automationenabled']
 
 
-if  (OpenState == 'Open') and (Enabled is True):
+if  (DoorStatus == 'Open') and (AutomationEnabled is True):
 	print("Door must close")
 	#This will now do whatever is needed to move the stepper motor appropriately 
 	#Update JSON file that the door is now closed
-	json_data['open'] = "Closed"
+	json_data['doorstatus'] = "Closed"
 
 	with open('values.json', 'w') as values:
     		#values.write(json.dumps(json_data))
