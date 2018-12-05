@@ -88,6 +88,34 @@ echo "Sunset - ",$data[Sunset];
 
 <form method="post">
 
+<div id="DoorGroup">
+<h3>Door Status:</h3>
+<button id="Door-Open" class="btn" name="DOOROPEN">Door Open</button>
+<button id="Door-Close" class="btn" name="DOORCLOSE">Door Close</button><br>
+<p>Status: <?php
+$data = json_decode(file_get_contents("values.json"),true);
+echo $data[doorstatus];
+?>
+</div>
+</div>
+
+<div id="AutomationGroup">
+  <h3>Automation Status:</h3>
+  <button id="Automation-Enabled" class="btn" name="AUTOMATIONENABLED">Enable</button>
+  <button id="Automation-Disabled" class="btn" name="AUTOMATIONENABLED">Disable</button><br>
+  <p>Status: <?php
+  $data = json_decode(file_get_contents("values.json"),true);
+  #echo $data[automationenabled];
+  if ($data[automationenabled] == true) {
+    echo "The door will open/close automatically in addition to manual operation.";
+  } else {
+    echo "The door is set to manual operation only.";
+  }
+  ?>
+  </div>
+  </div>
+</div>
+
 <div id="Outlet2Group" class="toprow firstrow">
 <h3>Outlet 2:</h3>
 <button id="2-Outlet-On" class="btn" name="GPIO03ON">Light On</button>
