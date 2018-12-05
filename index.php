@@ -10,65 +10,81 @@ if (isset($_POST['GPIO02ON']))
 {
 exec("sudo python Pin02ON.py");
 }
-if (isset($_POST['GPIO02OFF']))
+elseif (isset($_POST['GPIO02OFF']))
 {
 exec("sudo python Pin02OFF.py");
 }
-if (isset($_POST['GPIO03ON']))
+elseif (isset($_POST['GPIO03ON']))
 {
 exec("sudo python Pin03ON.py");
 }
-if (isset($_POST['GPIO03OFF']))
+elseif (isset($_POST['GPIO03OFF']))
 {
 exec("sudo python Pin03OFF.py");
 }
-if (isset($_POST['GPIO04ON']))
+elseif (isset($_POST['GPIO04ON']))
 {
 exec("sudo python Pin04ON.py");
 }
-if (isset($_POST['GPIO04OFF']))
+elseif (isset($_POST['GPIO04OFF']))
 {
 exec("sudo python Pin04OFF.py");
 }
-if (isset($_POST['GPIO17ON']))
+elseif (isset($_POST['GPIO17ON']))
 {
 exec("sudo python Pin17ON.py");
 }
-if (isset($_POST['GPIO17OFF']))
+elseif (isset($_POST['GPIO17OFF']))
 {
 exec("sudo python Pin17OFF.py");
 }
-if (isset($_POST['GPIO27ON']))
+elseif (isset($_POST['GPIO27ON']))
 {
 exec("sudo python Pin27ON.py");
 }
-if (isset($_POST['GPIO27OFF']))
+elseif (isset($_POST['GPIO27OFF']))
 {
 exec("sudo python Pin27OFF.py");
 }
-if (isset($_POST['GPIO22ON']))
+elseif (isset($_POST['GPIO22ON']))
 {
 exec("sudo python Pin22ON.py");
 }
-if (isset($_POST['GPIO22OFF']))
+elseif (isset($_POST['GPIO22OFF']))
 {
 exec("sudo python Pin22OFF.py");
 }
-if (isset($_POST['GPIO10ON']))
+elseif (isset($_POST['GPIO10ON']))
 {
 exec("sudo python Pin10ON.py");
 }
-if (isset($_POST['GPIO10OFF']))
+elseif (isset($_POST['GPIO10OFF']))
 {
 exec("sudo python Pin10OFF.py");
 }
-if (isset($_POST['GPIO09ON']))
+elseif (isset($_POST['GPIO09ON']))
 {
 exec("sudo python Pin09ON.py");
 }
-if (isset($_POST['GPIO09OFF']))
+elseif (isset($_POST['GPIO09OFF']))
 {
 exec("sudo python Pin09OFF.py");
+}
+elseif (isset($_POST['DOOROPEN']))
+{
+exec("sudo python DoorOpen.py");
+}
+elseif (isset($_POST['DOORCLOSE']))
+{
+exec("sudo python DoorClose.py");
+}
+elseif (isset($_POST['AUTOMATIONENABLE']))
+{
+exec("sudo python AutomationOn.py");
+}
+elseif (isset($_POST['AUTOMATIONDISABLE']))
+{
+exec("sudo python AutomationOff.py");
 }
 ?>
 <br>
@@ -105,7 +121,7 @@ echo $data[doorstatus];
   <h3>Automation Status:</h3>
 <p>
   <button id="Automation-Enabled" class="btn" name="AUTOMATIONENABLED">Enable</button>
-  <button id="Automation-Disabled" class="btn" name="AUTOMATIONENABLED">Disable</button><br>
+  <button id="Automation-Disable" class="btn" name="AUTOMATIONDISABLE">Disable</button><br>
   <p>Status: <?php
   $data = json_decode(file_get_contents("values.json"),true);
   #echo $data[automationenabled];
