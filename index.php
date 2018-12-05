@@ -114,7 +114,7 @@ echo "Sunset - ",$data[Sunset];
 $data = json_decode(file_get_contents("values.json"),true);
 if ($data[doorstatus] == "Open")
 {
-echo "<strong>" . $data[doorstatus] . "</strong>"; 
+echo "<strong>" . $data[doorstatus] . "</strong>";
 }
 else {
 echo $data[doorstatus];
@@ -149,7 +149,11 @@ echo $data[doorstatus];
 <p>Connect led to Pin No :5/ GPIO 03</p>
 <p>Status: <?php
 $data = json_decode(file_get_contents("values.json"),true);
-echo $data[plug2];
+if ($data[plug2] == "On") {
+  echo "<strong>On</strong>";
+} else {
+  echo "<strong>Off</strong>";
+}
 ?>
 </div>
 
@@ -160,7 +164,11 @@ echo $data[plug2];
 <p>Connect led to Pin No:11/ GPIO 17</p>
 <p>Status: <?php
 $data = json_decode(file_get_contents("values.json"),true);
-echo $data[plug4];
+if ($data[plug4] == "On") {
+  echo "<strong>On</strong>";
+} else {
+  echo "<strong>Off</strong>";
+}
 ?>
 </div>
 
@@ -171,7 +179,11 @@ echo $data[plug4];
 <p>Connect led to Pin No:9/ GPIO 09</p>
 <p>Status: <?php
 $data = json_decode(file_get_contents("values.json"),true);
-echo $data[plug8];
+if ($data[plug8] == "On") {
+  echo "<strong>On</strong>";
+} else {
+  echo "<strong>Off</strong>";
+}
 ?>
 </div>
 
@@ -182,7 +194,11 @@ echo $data[plug8];
 <p>Connect led to Pin No:15/ GPIO 22</p>
 <p>Status: <?php
 $data = json_decode(file_get_contents("values.json"),true);
-echo $data[plug6];
+if ($data[plug6] == "On") {
+  echo "<strong>On</strong>";
+} else {
+  echo "<strong>Off</strong>";
+}
 ?>
 </div>
 
@@ -193,7 +209,11 @@ echo $data[plug6];
 <p>Connect led to Pin No: 3/ GPIO 02</p>
 <p>Status: <?php
 $data = json_decode(file_get_contents("values.json"),true);
-echo $data[plug1];
+if ($data[plug1] == "On") {
+  echo "<strong>On</strong>";
+} else {
+  echo "<strong>Off</strong>";
+}
 ?>
 </div>
 
@@ -204,7 +224,11 @@ echo $data[plug1];
 <p>Connect led to Pin No:7/ GPIO 04</p>
 <p>Status: <?php
 $data = json_decode(file_get_contents("values.json"),true);
-echo $data[plug3];
+if ($data[plug3] == "On") {
+  echo "<strong>On</strong>";
+} else {
+  echo "<strong>Off</strong>";
+}
 ?>
 </div>
 
@@ -215,7 +239,11 @@ echo $data[plug3];
 <p>Connect led to Pin No:10/ GPIO 10</p>
 <p>Status: <?php
 $data = json_decode(file_get_contents("values.json"),true);
-echo $data[plug7];
+if ($data[plug7] == "On") {
+  echo "<strong>On</strong>";
+} else {
+  echo "<strong>Off</strong>";
+}
 ?>
 </div>
 
@@ -226,7 +254,11 @@ echo $data[plug7];
 <p>Connect led to Pin No:13/ GPIO 27</p>
 <p>Status: <?php
 $data = json_decode(file_get_contents("values.json"),true);
-echo $data[plug5];
+if ($data[plug5] == "On") {
+  echo "<strong>On</strong>";
+} else {
+  echo "<strong>Off</strong>";
+}
 ?>
 </div>
 
