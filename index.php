@@ -75,7 +75,7 @@ exec("sudo python Pin09OFF.py");
 <body>
 
 <div align="center">
-
+<div id="SunTimesGroup">
 <h3>Sunrise/Sunset Times</h3>
 <p>
 <?php
@@ -84,23 +84,26 @@ $data = json_decode(file_get_contents($url),true);
 echo "Sunrise - ",$data[Sunrise],"<br />";
 echo "Sunset - ",$data[Sunset];
 ?>
-</p><br /><br />
+</p>
+</div>
 
 <form method="post">
 
 <div id="DoorGroup">
 <h3>Door Status:</h3>
+<p>
 <button id="Door-Open" class="btn" name="DOOROPEN">Door Open</button>
 <button id="Door-Close" class="btn" name="DOORCLOSE">Door Close</button><br>
 <p>Status: <?php
 $data = json_decode(file_get_contents("values.json"),true);
 echo $data[doorstatus];
 ?>
-</div>
+</p>
 </div>
 
 <div id="AutomationGroup">
   <h3>Automation Status:</h3>
+<p>
   <button id="Automation-Enabled" class="btn" name="AUTOMATIONENABLED">Enable</button>
   <button id="Automation-Disabled" class="btn" name="AUTOMATIONENABLED">Disable</button><br>
   <p>Status: <?php
@@ -112,9 +115,10 @@ echo $data[doorstatus];
     echo "The door is set to manual operation only.";
   }
   ?>
-  </div>
-  </div>
+</p>
 </div>
+
+<div class="clear"></div>
 
 <div id="Outlet2Group" class="toprow firstrow">
 <h3>Outlet 2:</h3>

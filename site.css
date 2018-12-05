@@ -21,7 +21,15 @@ background-position: center;
 margin-bottom:15px;
 }
 
-#example
+#SunTimesGroup,#DoorGroup,#AutomationGroup
 {
-clear:left;
+float:left;
+display:inline;
+width:15%;
+margin:0px 9%;
+}
+
+.clear 
+{
+clear:both;
 }
