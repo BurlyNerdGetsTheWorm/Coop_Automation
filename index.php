@@ -112,7 +112,13 @@ echo "Sunset - ",$data[Sunset];
 <button id="Door-Close" class="btn" name="DOORCLOSE">Door Close</button><br>
 <p>Status: <?php
 $data = json_decode(file_get_contents("values.json"),true);
+if ($data[doorstatus] == "Open")
+{
+echo "<strong>" . $data[doorstatus] . "</strong>"; 
+}
+else {
 echo $data[doorstatus];
+}
 ?>
 </p>
 </div>
@@ -120,15 +126,15 @@ echo $data[doorstatus];
 <div id="AutomationGroup">
   <h3>Automation Status:</h3>
 <p>
-  <button id="Automation-Enabled" class="btn" name="AUTOMATIONENABLED">Enable</button>
+  <button id="Automation-Enable" class="btn" name="AUTOMATIONENABLE">Enable</button>
   <button id="Automation-Disable" class="btn" name="AUTOMATIONDISABLE">Disable</button><br>
   <p>Status: <?php
   $data = json_decode(file_get_contents("values.json"),true);
   #echo $data[automationenabled];
   if ($data[automationenabled] == true) {
-    echo "The door will open/close automatically in addition to manual operation.";
+    echo "<strong>Enabled</strong><br />(The door will open/close automatically in addition to manual operation.)";
   } else {
-    echo "The door is set to manual operation only.";
+    echo "<strong>Disabled</strong><br />(The door is set to manual operation only.)";
   }
   ?>
 </p>

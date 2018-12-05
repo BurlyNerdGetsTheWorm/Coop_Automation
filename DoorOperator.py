@@ -50,14 +50,14 @@ if ((int_Currenthour == (int(SunriseTime[:2])+1)) and (AMPM == "AM") and (Automa
 	print("Sunrise conditional is true")
 	exec(open("DoorOpen.py").read())
 else:
-	print("It is not currently time to open")
+	print("It is not currently time to open and/or automation is currently disabled")
 
 #Is it after Sunset?
 if ((int_Currenthour == (int(SunsetTime[:2])+1)) and (AMPM == "PM") and (AutomationEnabled is True)):
 	print("Sunset conditional is true")
 	exec(open("DoorClose.py").read())
 else:
-	print("It is not currently time to close")
+	print("It is not currently time to close and/or automation is currently disabled")
 
 #Write Sunrise and Sunset times to JSON
 	with open('values.json', 'w') as values:

@@ -12,8 +12,12 @@ with open('values.json', 'r') as values:
 if  (AutomationEnabled is False):
 	#Update JSON file to turn on automation
 	json_data['automationenabled'] = True
+	
+	print("Automation is now on")
 
 	with open('values.json', 'w') as values:
     		values.write(json.dumps(json_data))
+
+
 else:
 	print("Automation is already on")

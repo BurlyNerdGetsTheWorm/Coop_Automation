@@ -1,3 +1,9 @@
+h1 
+{
+font-size:1.5em;
+text-transform:uppercase;
+}
+
 #Outlet1Group,#Outlet2Group,#Outlet3Group,#Outlet4Group
 {
 float:left;
