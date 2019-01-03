@@ -25,8 +25,8 @@ if  (DoorStatus == 'Closed'):
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(DIR, GPIO.OUT)
     GPIO.setup(STEP, GPIO.OUT)
-    GPIO.setup(ON, GPIO.OUT)
-    GPIO.output(ON, 1)
+    GPIO.setup(ACTIVE, GPIO.OUT)
+    GPIO.output(ACTIVE, 1)
     sleep(.5)
     GPIO.output(DIR, CCW)
 
