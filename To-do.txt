@@ -1,3 +1,5 @@
 Add stepper motor hardware, with short connections between driver and motor, since apparently that helps with voltage spikes. Before you try that, though, just use long security system (like with dogfood dispensor)
 
 Use PHP to retrieve JSON variabes and swap out HTML or CSS to reflect (green for on, etc.)
+
+a change
